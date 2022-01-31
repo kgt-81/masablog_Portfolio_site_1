@@ -1,0 +1,669 @@
+@charset 'UTF-8';
+* {
+  box-sizing: border-box;
+  color: #505050;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+section{
+  margin: 100px auto 0;
+  max-width: 1170px;
+  width: 100%;
+  h2{
+    color: #A26C54;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .common-text{
+    font-family: "游ゴシック体";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 31px;
+    margin: 0 auto 50px;
+    text-align: center;
+    width: 342px;
+  }
+}
+.button{
+  background-color: #A26C54;
+    border-radius: 10px;
+    display: block;
+    font-size: 22px;
+    height: 52px;
+    line-height: 52px;
+    margin: 0 auto;
+    width: 170px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -20px;
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+}
+
+// header
+.header-wrapper{
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  padding: 0 2.34% 0 3.2%;
+  h1{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 12px;
+  }
+  #header-nav{
+    display: flex;
+    font-size: 18px;
+    list-style: none;
+    li{
+      margin-top: 25px;
+      &:nth-of-type(n+2){
+        margin-left: 38px;
+      }
+      a{
+        line-height: 22px;
+        position: relative;
+        &::after{
+          background-color: #A26C54;
+          bottom: -7px;
+          content: '';
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%) scaleX(0);
+          transition-duration: 0.5s;
+          transform-origin: left center;
+          width: 70px;
+        }
+        &:hover{
+          color: #828282;
+          &::after{
+            transform: translateX(-50%) scaleX(100%);
+          }
+        }
+      }
+    }
+  }
+  #menu{
+    display: none;
+  }
+}
+
+// main
+.main{
+  background-image: url('../img/keyboard-338502_1280.png');
+  background-position: right center;
+  background-size: cover;
+  height: 600px;
+  padding-top: 137px;
+  text-align: center;
+  *{
+    color: #FFF;
+  }
+  a {
+    font-family: "游ゴシック体";
+  }
+  .title{
+    font-size: 60px;
+    line-height: 1.5;
+  }
+  .main-text{
+    font-family: "游ゴシック体";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 31px;
+    margin: 66px auto;
+    width: 342px;
+  }
+}
+
+// about
+#about{
+  h2{
+    margin-bottom: 50px;
+  }
+  .container{
+    margin-bottom: 0;
+    &>*{
+      width: 570px;
+    }
+    h3{
+      color: #A26C54;
+      font-family: "游ゴシック体";
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+    .about-img{
+      background-color: #CCC;
+      height: 450px;
+      margin-right: 30px;
+    }
+    .about-item-text{
+      font-family: "游ゴシック体";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      &:nth-last-of-type(n+2){
+        margin-bottom: 50px;        
+      }
+    }
+  }
+}
+
+// works
+#works{
+  h2{
+    margin-bottom: 51px;
+  }
+  
+  .works-item{
+    margin-bottom: 20px;
+    margin-right: 30px;
+    width: 370px;
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+    .work-img{
+      background-color: #CCC;
+      height: 280px;
+    }
+    p{
+      border: 1px solid #CCC;
+      font-family: "游ゴシック体";
+      font-size: 18px;
+      padding: 17px 23px;
+    }
+  }
+}
+
+// service
+#service {
+  h2{
+    margin-bottom: 52px;
+  }
+  h3{
+    color: #A26C54;
+    font-family: "游ゴシック体";
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 13px;
+    text-align: center;
+  }
+  .service-item{
+    border: 1px solid #CCC;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    padding: 25px 14px 28px;
+    width: 370px;
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+    p {
+      font-family: "游ゴシック体";  
+    }
+  }
+}
+
+// My skills
+#my-skills{
+  background-image: url('../img/macbook-336692_1280.png');
+  background-size: cover;
+  max-width: 100%;
+  *{
+    color: #FFF;
+    text-align: left;
+  }
+  h2{
+    font-size: 60px;
+    margin-bottom: 38px;
+    width: 100%;
+  }
+  h3{
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  p{
+    font-family: "游ゴシック体";
+    font-size: 18px;
+  }
+  .filter{
+    background-color: rgba(85, 85, 85, 0.59);
+    padding: 29px 0 59px;
+    >*{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1170px;  
+    }
+  }
+  .container{
+    justify-content: flex-start;
+    margin-bottom: 0;
+    width: 1170px;
+  }
+  .my-skills-item{
+    margin-right: 55px;
+    width: 342px;
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+    &:nth-last-of-type(n+4){
+      margin-bottom: 25px;
+    }
+  }
+}
+
+// contact
+#contact{
+  width: 570px;
+  h2{
+    margin-bottom: 52px;
+  }
+  label{
+    display: block;
+    font-family: "游ゴシック体";
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  form{
+    width: 100%;
+  }
+  input{
+    height: 38px;
+    margin-bottom: 17px;
+  }
+  textarea{
+    margin-bottom: 20px;
+  }
+  input,textarea{
+    border: 1px solid #CED4D9;
+    border-radius: 5px;
+    padding: 6px 12px;
+    width: 100%;
+    &:focus{
+      box-shadow: rgba(0,123 ,255 ,0.25 ) 0 0 0 3.2px;
+      outline: none;
+    }
+  }
+  .button{
+    border: none;
+    color: #FFF;
+    font-family: "游ゴシック体";
+    font-size: 22px;
+    font-weight: 500;
+    width: 170px;
+  }
+}
+
+// footer
+footer{
+  background-color: #c6a394;
+  margin-top: 85px;
+  padding: 38px 0 43px;
+  *{
+    color: #FFF;
+    font-size: 18px;
+  }
+  .footer-nav{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto 21px;
+    li{
+      margin: 0 19px;
+    }
+  }
+  small{
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and(max-width: 1182px) {
+  section{
+    max-width: 930px;
+  }
+
+  // about
+  #about .container{
+    &>*{
+      width: 450px;
+    }
+    h3{
+      margin-bottom: 25px;
+    }
+    .about-img{
+      margin-right: 15px;
+    }
+    .about-item-text:nth-last-of-type(n+2){
+      margin-bottom: 45px;        
+    }
+  }
+
+  // works
+  #works {
+    .container{
+      justify-content: center;
+    }
+    .works-item {
+      width: 269px;
+      &:nth-of-type(n){
+        margin: 18px;
+      }
+      .work-img{
+        height: 180px;
+      }
+    }
+  }
+
+  // service
+  #service .service-item{
+    padding-bottom: 37px;
+    padding-top: 17px;
+    width: 290px;
+  }
+
+  // My skills
+  #my-skills {
+    background-position: top center;
+    width: 100%;
+    h3{
+      margin-bottom: 10px;
+    }
+    .my-skills-item{
+      width: 269px;
+      &:nth-last-of-type(n){
+        margin: 18px;
+      }
+    }
+    .filter{
+      padding-bottom: 44px;
+      >*{
+        width: 930px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 982px){
+  // works
+  #works .works-item{
+    width: 44.64%;
+  }
+  // service
+  #service {
+    .container{
+      margin-bottom: 0;
+    }
+    .service-item {
+      margin-bottom: 0;
+      width: 100%;
+      &:nth-last-of-type(n+2){
+        margin-bottom: 25px;
+        margin-right: 0;
+      }
+    }
+  }
+    // My skills
+    #my-skills {
+      .filter>*{
+        width: 690px;
+      }
+      .my-skills-item{
+        width: 310px;
+        &:nth-last-of-type(n){
+          margin: 13px;
+        }
+      }
+    }
+  
+}
+
+@media screen and(max-width: 976px){
+  section{
+    width: 690px;
+    h2{
+      margin-bottom: 30px;
+    }
+  }
+
+  // about
+  #about .container>*{
+    width: 330px;
+  }
+
+  // works
+  #works .works-item .work-img{
+    height: 180px;
+  }
+
+}
+
+@media screen and(max-width: 752px){
+  // header
+  .header-wrapper {
+    align-items: center;
+    height: 55px;
+    position: relative;
+    h1{
+      font-size: 25px;
+      margin: 0;
+    }
+    #menu{
+      display: block;
+      height: 20px;
+      position: relative;
+      width: 30px;
+      span{
+        background-color: #505050;
+        height: 2px;
+        position: absolute;
+        transition-duration: 0.5s;
+        width: 30px;
+      }
+      .top{
+        top: 0;
+      }
+      .center{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .bottom{
+        bottom: 0;
+      }
+      &.active{
+        .top{
+          top: 50%;
+          transform: rotate(45deg) translateY(-50%);
+        }
+        .center{
+          transform: translateY(-50%) scaleX(0);
+        }
+        .bottom{
+          bottom: 50%;
+          transform: rotate(-45deg) translateY(50%);
+        }
+      }
+    }
+    #header-nav{
+      background-color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      font-size: 36px;
+      font-weight: 600;
+      height: 0;
+      left: 0;
+      overflow: hidden;
+      padding-top: 0;
+      position: fixed;
+      top: 0;
+      transition-duration: 0.5s;
+      width: 100vw;
+      &.show{
+        height: 100vh;
+        padding-top: 175px;
+      }
+      li{
+        margin: 15px auto;
+        width: 158px;
+        &:nth-of-type(n+2){
+          margin-left: auto;
+        }
+        a{
+          line-height: 1.5;
+          padding: 15px;
+          transition-duration: 0.5s;
+          &::after{
+            display: none;
+          }
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  section{
+    margin-top: 70px;
+    width: 100%;
+    .common-text{
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+  }
+
+  .container{
+    margin: 0 auto;
+    max-width: 510px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+  // main
+  .main {
+    height: 400px;
+    padding-top: 80px;
+    .title{
+      font-size: 40px;
+    }
+    .main-text{
+      font-size: 16px;
+      margin: 40px auto 52px;
+    }
+  }
+  // about
+  #about {
+    h2{
+      margin-bottom: 30px;
+    }
+    .common-text{
+      margin-bottom: 30px;
+    }
+    .container{
+      >*{
+        width: 100%;
+      }
+      .about-img{
+        margin-right: 0;
+      }
+      .about-textarea{
+        margin-top: 25px;
+      }
+      .about-item-text{
+        font-size: 16px;
+      }
+    }
+  }
+
+  // works
+  #works {
+    h2{
+      margin-bottom: 30px;
+    }
+    .works-item{
+      width: 100%;
+      &:nth-of-type(n){
+        margin: 10px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+
+  // service
+  #service{
+    h2{
+      margin-bottom: 30px;
+    }
+    .service-item{
+      padding: 18px 10px 20px;
+      p{
+        font-size: 16px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  // My skills
+  #my-skills{
+    margin-top: 100px;
+    p{
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .filter > *{
+      max-width: 510px;
+      width: 100%;
+    }
+    .my-skills-item{
+      width: 100%;
+    }
+  }
+
+  // contact
+  #contact {
+    width: 100%;
+    h2{
+      margin-bottom: 30px;
+    }
+    form{
+      margin: 0 15px;
+      width: 100%;
+    }
+    label{
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    input{
+      margin-bottom: 12px;
+    }
+  }
+
+  // footer
+  footer *{
+    font-size: 16px;
+  }
+}
